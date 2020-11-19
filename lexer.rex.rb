@@ -6,7 +6,7 @@
 
 require 'racc/parser'
 require_relative "utils.rb"
-class Lexer < Racc::Parser
+class BlangLexer < Racc::Parser
       require 'strscan'
 
       class ScanError < StandardError ; end

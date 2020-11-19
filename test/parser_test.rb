@@ -4,14 +4,14 @@ require_relative  "../parser.rb"
 require_relative  "../nodes.rb"
 class ParserTest < Test::Unit::TestCase
     def test_number
-        parser = Parser.new
+        parser = BlangParser.new
         nodes = parser.parse("၁၂၃၄")
         
         assert_equal Nodes.new([NumberNode.new(1234)]), nodes
     end
 
     def test_string
-        parser = Parser.new
+        parser = BlangParser.new
         nodes = parser.parse('"hi"')
       
         assert_equal Nodes.new([StringNode.new("hi")]), nodes
@@ -19,7 +19,7 @@ class ParserTest < Test::Unit::TestCase
         
       
     def test_identifier
-        parser = Parser.new
+        parser = BlangParser.new
         nodes = parser.parse("စျေးတက်မယ်")
       
         assert_equal Nodes.new([GetLocalNode.new("စျေးတက်မယ်")]), nodes
@@ -27,28 +27,28 @@ class ParserTest < Test::Unit::TestCase
       
 
     def test_true
-        parser = Parser.new
+        parser = BlangParser.new
         nodes = parser.parse("true")
         assert_equal Nodes.new([TrueNode.new()]), nodes
 
     end
 
     def test_false
-        parser = Parser.new
+        parser = BlangParser.new
         nodes = parser.parse("false")
         assert_equal Nodes.new([FalseNode.new()]), nodes
 
     end
    
     def test_nil
-        parser = Parser.new
+        parser = BlangParser.new
         nodes = parser.parse("false")
         assert_equal Nodes.new([FalseNode.new()]), nodes
     end
    
 
     def test_code_block
-        parser = Parser.new
+        parser = BlangParser.new
         code = <<-CODE
         အကယ်၍ a == "abc"
         စျေးတက်မယ်
