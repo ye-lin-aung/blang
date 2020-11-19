@@ -1,12 +1,13 @@
-# The Awesome language!
+#!/usr/bin/env ruby
+# The Blang language!
 # 
 # usage:
-#   ./awesome example.awm # to eval a file
-#   ./awesome             # to start the REPL
+#   ./Blang blang# to eval a file
+#   ./blang             # to start the REPL
 #
 # on Windows run with: ruby -I. awesome [options]
 
-require "interpreter"
+require_relative "interpreter"
 require "readline"
 
 interpreter = Interpreter.new
