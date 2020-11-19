@@ -5,9 +5,9 @@ class BaseMethod
     end
 
     def call(receiver, arguments)
-        @context = Context.new(receiver)
+        context = Context.new(receiver)
         @params.each_with_index do |param,index|
-            @context.locals[param] = arguments[index]
+            context.locals[param] = arguments[index]
         end
         @body.eval(context)
     end

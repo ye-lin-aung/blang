@@ -5,6 +5,7 @@ class BaseObject
         @ruby_value = ruby_value
     end
     def call(method, args = [])
+          
         @runtime_class.lookup(method).call(self, args)
     end
 end
