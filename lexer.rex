@@ -1,5 +1,5 @@
 require_relative "utils.rb"
-class Lexer
+class BlangLexer
 macro
   BLANK         [\ \t]+
   DEF           ကြေညာချက်

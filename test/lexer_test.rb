@@ -3,7 +3,7 @@ require_relative  "test_helper"
 require_relative  "../lexer.rex"
 class LexerTest < Test::Unit::TestCase
     def test_number
-        lex = Lexer.new
+        lex = BlangLexer.new
         lex.scan_setup("၁၂၃၄")
         token = lex.next_token
 
@@ -11,7 +11,7 @@ class LexerTest < Test::Unit::TestCase
     end
 
     def test_string
-        lex = Lexer.new
+        lex = BlangLexer.new
         lex.scan_setup('"hi"')
         token = lex.next_token
         assert_equal [:BSTRING, "hi"], token
@@ -19,7 +19,7 @@ class LexerTest < Test::Unit::TestCase
         
       
     def test_identifier
-        lex = Lexer.new
+        lex = BlangLexer.new
         lex.scan_setup("name")
         token = lex.next_token
         assert_equal [:BIDENTIFIER, "name"], token
@@ -27,21 +27,21 @@ class LexerTest < Test::Unit::TestCase
       
 
     def test_true
-        lex = Lexer.new
+        lex = BlangLexer.new
         lex.scan_setup("true")
         token = lex.next_token
         assert_equal [:BTRUE, "true"], token
     end
 
     def test_false
-        lex = Lexer.new
+        lex = BlangLexer.new
         lex.scan_setup("false")
         token = lex.next_token
         assert_equal [:BFALSE, "false"], token
     end
    
     def test_nil
-        lex = Lexer.new
+        lex = BlangLexer.new
         lex.scan_setup("nil")
         token = lex.next_token
         assert_equal [:BNIL, "nil"], token
@@ -49,7 +49,7 @@ class LexerTest < Test::Unit::TestCase
    
    
     def test_operator
-        lex = Lexer.new
+        lex = BlangLexer.new
         lex.scan_setup("+ ||")
         token1 = lex.next_token
         token2 = lex.next_token
@@ -69,7 +69,7 @@ b = ၁ + ၂
     ပြီး 
 ပြီး
         CODE
-        lex = Lexer.new
+        lex = BlangLexer.new
         lex.scan_setup(code)
         tokens = []
         while token = lex.next_token
@@ -77,26 +77,26 @@ b = ၁ + ၂
         end
         result = [[:BCLASS, "class"],
           [:BIDENTIFIER, "a"],
-          [:NEWLINE],
+          [:NEWLINE, :NEWLINE],
           [:BIDENTIFIER, "a"], 
           ["=","="],
           [:BSTRING, "abc"],
-          [:NEWLINE],
+          [:NEWLINE, :NEWLINE],
           [:BIDENTIFIER, "b"],
           ["=", "="], 
           [:BNUMBER, 1],
           ["+", "+"], 
           [:BNUMBER, 2],
-          [:NEWLINE],
+          [:NEWLINE,:NEWLINE],
           [:BIF,"if"],
           [:BIDENTIFIER, "a"],
           ["==","=="],
           [:BSTRING, "abc"],
-          [:NEWLINE],
+          [:NEWLINE, :NEWLINE],
           [:BIDENTIFIER, "စျေးတက်မယ်"],
-          [:NEWLINE],
+          [:NEWLINE, :NEWLINE],
           [:BEND, "end"],
-          [:NEWLINE],
+          [:NEWLINE, :NEWLINE],
           [:BDEF, "def"], 
           [:BIDENTIFIER, "a"],
           ["(","("],
@@ -104,11 +104,11 @@ b = ၁ + ၂
           [",",","],
           [:BIDENTIFIER, "x"],
           [")",")"],
-          [:NEWLINE],
+          [:NEWLINE, :NEWLINE],
           [:BEND, "end"],
-          [:NEWLINE],
+          [:NEWLINE , :NEWLINE],
           [:BEND, "end"],
-          [:NEWLINE]
+          [:NEWLINE, :NEWLINE]
         ]
        
 

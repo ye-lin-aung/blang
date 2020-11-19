@@ -9,11 +9,11 @@ require 'racc/parser.rb'
   require_relative "lexer.rex.rb"
   require_relative "nodes"
 
-class Parser < Racc::Parser
+class BlangParser < Racc::Parser
 
 module_eval(<<'...end grammer.y/module_eval...', 'grammer.y', 152)
   def parse(code, show_tokens=false)
-    @lex = Lexer.new
+    @lex = BlangLexer.new
     @lex.scan_setup(code)
     do_parse
   end
@@ -698,4 +698,4 @@ def _reduce_none(val, _values, result)
   val[0]
 end
 
-end   # class Parser
+end   # class BlangParser

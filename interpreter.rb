@@ -2,7 +2,7 @@ require_relative "parser"
 require_relative "runtime"
 class Interpreter
     def initialize
-        @parser = Parser.new
+        @parser = BlangParser.new
     end
 
     def eval(code)

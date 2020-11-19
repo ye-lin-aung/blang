@@ -1,4 +1,4 @@
-class Parser
+class BlangParser
 token BIF
 token BDEF
 token BCLASS
@@ -150,7 +150,7 @@ end
 
 ---- inner
   def parse(code, show_tokens=false)
-    @lex = Lexer.new
+    @lex = BlangLexer.new
     @lex.scan_setup(code)
     do_parse
   end
