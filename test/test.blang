@@ -1,10 +1,12 @@
 အခန်း NewClass
 a = "abc" 
 b = ၁ - ၂ + ၃ + ၄
-
+f = မှား
+n = နတ္ထိ
 ကြေညာချက် k()
     10
 ပြီး
+
 
 ပြ(b+k())
 ပြ("This is awesome item")
