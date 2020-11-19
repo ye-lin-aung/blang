@@ -7,7 +7,5 @@ class Context
         @current_class = current_class
     end
 
-    def to_s
-        "CurrentSelf - #{current_self} && CurrentClass - #{current_class}"
-    end
+ 
 end

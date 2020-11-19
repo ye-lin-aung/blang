@@ -1,5 +1,5 @@
 class BaseClass < BaseObject
-    attr_reader :runtime_methods
+    attr_accessor :runtime_methods, :runtime_superclass
     def initialize(superclass=nil)
         @runtime_methods = {}
         @runtime_class = Boot["Class"]
@@ -7,6 +7,7 @@ class BaseClass < BaseObject
     end
 
     def lookup(name)
+      
         method = @runtime_methods[name]
         unless method
             if @runtime_superclass

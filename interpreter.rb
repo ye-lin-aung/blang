@@ -63,23 +63,28 @@ end
 
 class DefNode
     def eval(context)
+        
         method = BaseMethod.new(params, body)
-        context.current_class.runtime_methods[name] = method
+        context.current_class.runtime_methods[name.to_s] = method
+   
     end
 end
 
 class CallNode
-   
     def eval(context)
+    
      if receiver
-        value = receiver.eval(context)
-      
+        value = receiver.eval(context)  
      else
+     
         value = context.current_self # Default to `self` if no receiver.
- 
      end
+      
+    
     evaluated_arguments = arguments.map { |arg| arg.eval(context) }
-    value.call(method, evaluated_arguments)
+   
+    # p context.current_self.runtime_class
+    value.call(method.to_s, evaluated_arguments)
     end
 end
 
@@ -88,14 +93,12 @@ class ClassNode
     def eval(context)
         new_class = Boot[name]
         unless new_class
-            new_class = BaseClass.new
+            new_class = Boot["Class"] 
             Boot[name] = new_class
         end
         
         class_context = Context.new(new_class,new_class)
-        puts class_context.to_s
         body.eval(class_context)
-        
         new_class
     end
 end
