@@ -1,0 +1,6 @@
+* Blang (Burmese programming language)
+This is a programming language backed by ruby. The project is just for my research to validate how much it is possible to write a programming lanague in burmese.
+I have no intention to make the language super performant or make it as a production ready language at the time.
+I may rewrite the language in C if the language got enough attention. Currently implementation should not be used at production at any costs. 
+
+
