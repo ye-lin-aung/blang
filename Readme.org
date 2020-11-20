@@ -49,9 +49,13 @@ y = "ဝိုင်"
 #+END_SRC
 
 ** Operators
-#+BEGIN_SRC
-* TODO Need to display with table for better version
-#+END_SRC
+Infix operators in blang:
++ ~+~ =:addition=
++ ~-~ =:subtraction=
++ ~*~ =:multiplication=
++ ~/~ =:division=
+
+TODO Need to display with table for better version
 
 ** Nil (နတ္ထိ)
 #+BEGIN_SRC
@@ -59,8 +63,8 @@ y = "ဝိုင်"
 #+END_SRC
 
 ** Boolean
+~ကြေညာချက် = မှား || မှန်~
 #+BEGIN_SRC
-#ကြေညာချက် = မှား || မှန်
 အမှား = မှား
 အမှန် = မှန်
 #+END_SRC
