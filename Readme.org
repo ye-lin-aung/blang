@@ -63,7 +63,7 @@ TODO Need to display with table for better version
 #+END_SRC
 
 ** Boolean
-~ကြေညာချက် = မှား || မှန်~
+~အမှားအမှန် = မှား || မှန်~
 #+BEGIN_SRC
 အမှား = မှား
 အမှန် = မှန်
