@@ -24,12 +24,12 @@ rule
   {FALSE}       { [:BFALSE, "false"]}
   {TRUE_ENG}        { [:BTRUE, "true"]}
   {FALSE_ENG}       { [:BFALSE, "false"]}
+  {STRING}      { [:BSTRING, text.gsub('"', '')]}
   {NIL}         { [:BNIL, "nil"] }
   {WHILE}       { [:BWHILE,"while"]}
   {NUMBER}      { [:BNUMBER, text.myanmar_numbers_to_english.to_i]}
   \d+           { [:BNUMBER, text.myanmar_numbers_to_english.to_i] }
   \n            { [:NEWLINE,:NEWLINE] }
-  {STRING}      { [:BSTRING, text.gsub('"', '')]}
   {CLASS}       {[:BCLASS,"class"]}
   {BLANK}
   {DEF}(\s+)    { [:BDEF,"def"] }
