@@ -3,4 +3,23 @@ This is a programming language backed by ruby. The project is just for my resear
 I have no intention to make the language super performant or make it as a production ready language at the time.
 I may rewrite the language in C if the language got enough attention. Currently implementation should not be used at production at any costs. 
 
+* Example 
+#+BEGIN_SRC
+အခန်း NewClass
+ a = "abc" 
+ b = ၁ - ၂ + ၃ + ၄
+ f = မှား
+ အကို  = နတ္ထိ
+ n = "data"
+ ကြေညာချက် k()
+    10
+ ပြီး
 
+ ပြ(f)
+ ပြ(n)
+ ပြ(အကို) 
+ ပြ(b+k())
+ ပြ("This is awesome item")
+
+ပြီး
+#+END_SRC
