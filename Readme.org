@@ -49,7 +49,9 @@ y = "ဝိုင်"
 #+END_SRC
 
 ** Operators
+#+BEGIN_SRC
 * TODO Need to display with table for better version
+#+END_SRC
 
 ** Nil (နတ္ထိ)
 #+BEGIN_SRC
@@ -58,7 +60,7 @@ y = "ဝိုင်"
 
 ** Boolean
 #+BEGIN_SRC
-~ကြေညာချက် = မှား || မှန်~
+#ကြေညာချက် = မှား || မှန်
 အမှား = မှား
 အမှန် = မှန်
 #+END_SRC
