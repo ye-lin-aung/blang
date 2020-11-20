@@ -1,11 +1,15 @@
 အခန်း NewClass
 a = "abc" 
 b = ၁ - ၂ + ၃ + ၄
-
+f = မှား
+n = နတ္ထိ
+n = "data"
 ကြေညာချက် k()
     10
 ပြီး
 
+ပြ(f)
+ပြ(n)
 ပြ(b+k())
 ပြ("This is awesome item")
 

@@ -79,6 +79,9 @@ class BlangLexer < Racc::Parser
                   when (text = @ss.scan(/false/))
                      action { [:BFALSE, "false"]}
 
+                  when (text = @ss.scan(/နတ္ထိ/))
+                     action { [:BNIL, "nil"]}
+
                   when (text = @ss.scan(/nil/))
                      action { [:BNIL, "nil"] }
 

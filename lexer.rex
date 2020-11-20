@@ -15,7 +15,7 @@ macro
   TRUE_ENG      true
   FALSE_ENG     false
   FALSE         မှား
-  NIL           nil
+  NIL           နတ္ထိ
 rule
   \r
   {OPERATOR}    { [text, text]}
