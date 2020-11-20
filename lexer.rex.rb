@@ -79,10 +79,10 @@ class BlangLexer < Racc::Parser
                   when (text = @ss.scan(/false/))
                      action { [:BFALSE, "false"]}
 
-                  when (text = @ss.scan(/နတ္ထိ/))
-                     action { [:BNIL, "nil"]}
+                  when (text = @ss.scan(/\A"([^"]*)"/))
+                     action { [:BSTRING, text.gsub('"', '')]}
 
-                  when (text = @ss.scan(/nil/))
+                  when (text = @ss.scan(/နတ္ထိ/))
                      action { [:BNIL, "nil"] }
 
                   when (text = @ss.scan(/မဖြစ်မချင်း/))
@@ -96,9 +96,6 @@ class BlangLexer < Racc::Parser
 
                   when (text = @ss.scan(/\n/))
                      action { [:NEWLINE,:NEWLINE] }
-
-                  when (text = @ss.scan(/\A"([^"]*)"/))
-                     action { [:BSTRING, text.gsub('"', '')]}
 
                   when (text = @ss.scan(/အခန်း/))
                      action {[:BCLASS,"class"]}

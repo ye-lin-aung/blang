@@ -42,7 +42,7 @@ class LexerTest < Test::Unit::TestCase
    
     def test_nil
         lex = BlangLexer.new
-        lex.scan_setup("nil")
+        lex.scan_setup("နတ္ထိ")
         token = lex.next_token
         assert_equal [:BNIL, "nil"], token
     end
