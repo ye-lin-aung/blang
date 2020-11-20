@@ -49,8 +49,18 @@ y = "ဝိုင်"
 #+END_SRC
 
 ** Operators
-** TODO Need to display with table for better version
+* TODO Need to display with table for better version
 
-** Nil 
-** Boolean 
+** Nil (နတ္ထိ)
+#+BEGIN_SRC
+မရှိ = နတ္ထိ
+#+END_SRC
+
+** Boolean
+#ကြေညာချက် = မှား || မှန်
+အမှား = မှား
+အမှန် = မှန်
+
 ** Strings 
+ဥပမာ = "Blang သည် မြန်မာ ပရိုဂရမ်းမင်း ဘာသာစကား တစ်ခုဖြစ်သည်။"
+ပြ(ဥပမာ)
