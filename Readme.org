@@ -26,9 +26,31 @@ I may rewrite the language in C if the language got enough attention. Currently 
 
 * Syntax
 ** Class
+#+BEGIN_SRC
+အခန်း BClass
+    
+ပြီး
+#+END_SRC
+
 ** Methods
-** Variable decleration 
-** Operators 
+#+BEGIN_SRC
+ကြေညာချက် b_method()
+
+ပြီး
+#+END_SRC
+
+** Variable decleration
+#+BEGIN_SRC
+x = 8
+y = "ဝိုင်"
+မရှိ = နတ္ထိ
+အမှား = မှား
+အမှန် = မှန်
+#+END_SRC
+
+** Operators
+** TODO Need to display with table for better version
+
 ** Nil 
 ** Boolean 
 ** Strings 
