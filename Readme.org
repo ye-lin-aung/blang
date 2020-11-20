@@ -39,7 +39,7 @@ I may rewrite the language in C if the language got enough attention. Currently 
 ပြီး
 #+END_SRC
 
-** Variable decleration
+** Variable declaration
 #+BEGIN_SRC
 x = 8
 y = "ဝိုင်"
