@@ -23,3 +23,12 @@ I may rewrite the language in C if the language got enough attention. Currently 
 
 ပြီး
 #+END_SRC
+
+* Syntax
+** Class
+** Methods
+** Variable decleration 
+** Operators 
+** Nil 
+** Boolean 
+** Strings 
