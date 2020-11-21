@@ -74,3 +74,7 @@ TODO Need to display with table for better version
 ဥပမာ = "Blang သည် မြန်မာ ပရိုဂရမ်းမင်း ဘာသာစကား တစ်ခုဖြစ်သည်။"
 ပြ(ဥပမာ)
 #+END_SRC
+
+** Contributing
+
+See the file [[/CONTRIBUTING.md][CONTRIBUTING.md]]
