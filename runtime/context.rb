@@ -7,5 +7,8 @@ class Context
         @current_class = current_class
     end
 
+    def to_s
+        "<#Context#>:#{current_self} -> #{current_class}"
+    end
  
 end

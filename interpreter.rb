@@ -1,12 +1,19 @@
 require_relative "parser"
 require_relative "runtime"
 class Interpreter
-    def initialize
+ 
+    def initialize(debug=false)
         @parser = BlangParser.new
+        @debug = debug
     end
 
     def eval(code)
-        @parser.parse(code).eval(RootContext)
+        results = @parser.parse(code,@debug)
+        
+        if @debug
+            print results 
+        end
+        results.eval(RootContext)
     end
 end
 
@@ -73,6 +80,9 @@ end
 class CallNode
     def eval(context)
     
+     puts context.to_s
+     puts method.to_s
+     puts arguments
      if receiver
         value = receiver.eval(context)  
      else

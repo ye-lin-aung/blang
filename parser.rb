@@ -15,11 +15,16 @@ module_eval(<<'...end grammer.y/module_eval...', 'grammer.y', 152)
   def parse(code, show_tokens=false)
     @lex = BlangLexer.new
     @lex.scan_setup(code)
+    @show_tokens = show_tokens
     do_parse
   end
   
   def next_token
-    @lex.next_token
+    token = @lex.next_token
+    if @show_tokens
+      print token
+    end
+    token
   end
 ...end grammer.y/module_eval...
 ##### State transition tables begin ###
