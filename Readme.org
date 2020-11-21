@@ -78,3 +78,7 @@ TODO Need to display with table for better version
 ** Contributing
 
 See the file [[/CONTRIBUTING.md][CONTRIBUTING.md]]
+
+** License
+
+[[/LICENSE.md][MIT]]
