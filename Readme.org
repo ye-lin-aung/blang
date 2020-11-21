@@ -77,4 +77,4 @@ TODO Need to display with table for better version
 
 ** Contributing
 
-See the file [[/CONTRIBUTING.md::line][CONTRIBUTING.md]]
+See the file [[/CONTRIBUTING.md][CONTRIBUTING.md]]
