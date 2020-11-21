@@ -1,0 +1,76 @@
+* Blang (Burmese programming language)
+This is a programming language backed by ruby. The project is just for my research to validate how much it is possible to write a programming lanague in burmese.
+I have no intention to make the language super performant or make it as a production ready language at the time.
+I may rewrite the language in C if the language got enough attention. Currently implementation should not be used at production at any costs. 
+
+* Example 
+#+BEGIN_SRC
+အခန်း NewClass
+ a = "abc" 
+ b = ၁ - ၂ + ၃ + ၄
+ f = မှား
+ အကို  = နတ္ထိ
+ n = "data"
+ ကြေညာချက် k()
+    10
+ ပြီး
+
+ ပြ(f)
+ ပြ(n)
+ ပြ(အကို) 
+ ပြ(b+k())
+ ပြ("This is awesome item")
+
+ပြီး
+#+END_SRC
+
+* Syntax
+** Class
+#+BEGIN_SRC
+အခန်း BClass
+    
+ပြီး
+#+END_SRC
+
+** Methods
+#+BEGIN_SRC
+ကြေညာချက် b_method()
+
+ပြီး
+#+END_SRC
+
+** Variable declaration
+#+BEGIN_SRC
+x = 8
+y = "ဝိုင်"
+မရှိ = နတ္ထိ
+အမှား = မှား
+အမှန် = မှန်
+#+END_SRC
+
+** Operators
+Infix operators in blang:
++ ~+~ =:addition=
++ ~-~ =:subtraction=
++ ~*~ =:multiplication=
++ ~/~ =:division=
+
+TODO Need to display with table for better version
+
+** Nil (နတ္ထိ)
+#+BEGIN_SRC
+မရှိ = နတ္ထိ
+#+END_SRC
+
+** Boolean
+~အမှားအမှန် = မှား || မှန်~
+#+BEGIN_SRC
+အမှား = မှား
+အမှန် = မှန်
+#+END_SRC
+
+** Strings
+#+BEGIN_SRC
+ဥပမာ = "Blang သည် မြန်မာ ပရိုဂရမ်းမင်း ဘာသာစကား တစ်ခုဖြစ်သည်။"
+ပြ(ဥပမာ)
+#+END_SRC

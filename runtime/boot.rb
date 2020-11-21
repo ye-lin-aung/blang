@@ -18,6 +18,7 @@ Boot["false"] = Boot["FalseClass"].new_with_value(false)
 Boot["nil"] = Boot["NilClass"].new_with_value(nil)
 
 Boot["Class"].define :new do |receiver, arguments|
+    puts "Calling new method"
     receiver.new
 end
 
