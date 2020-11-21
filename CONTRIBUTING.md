@@ -1,4 +1,4 @@
-#Contributing
+# Contributing
 
 Everyone is welcome to contribute to Blang. Contributing doesn’t just mean submitting pull requests—there are many different ways for you to get involved, creating issues, reporting or triaging bugs, and participating in the Blang evolution process.
 
